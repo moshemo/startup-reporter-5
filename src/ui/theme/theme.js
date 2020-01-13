@@ -1,22 +1,22 @@
-import { breakpoints } from './variables/breakpoints'
-import { borderWidths } from './variables/borders'
-import { colors } from './variables/colors'
-import { radii } from './variables/radii'
-import { shadows } from './variables/shadows'
-import { sizes } from './variables/sizes'
-import { space } from './variables/space'
 import {
+  breakpoints,
+  borderWidths,
+  colors,
+  fonts,
   fontSizes,
   fontWeights,
   lineHeights,
   letterSpacings,
-  fonts,
-} from './variables/typography'
+  radii,
+  shadows,
+  sizes,
+  space,
+} from './variables'
 
 const theme = {
-  colors,
   borderWidths,
   breakpoints,
+  colors,
   fonts,
   fontSizes,
   fontWeights,

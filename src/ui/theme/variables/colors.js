@@ -1,45 +1,43 @@
-import { alpha as alphaColors, material } from 'Elements'
+import { alpha as alphaColors, material } from './color-helpers'
 
-export const colors = {
-  alphaColors,
-  material,
-  grey: material.grey,
+export const alpha = { ...alphaColors }
+export const grey = material.grey
 
-  primary: material.lightBlue,
-  secondary: material.green,
-  tertiary: material.purple,
-  accent: material.orange,
+export const primary = material.lightBlue
+export const secondary = material.green
+export const tertiary = material.purple
+export const accent = material.orange
 
-  link: {
-    base: material.blue.m500,
-    active: material.grey.m900,
-    focus: material.grey.m800,
-    hover: material.grey.m700,
-    visited: material.purple.m600,
-  },
-
-  info: material.blue.m400,
-  success: material.green.m400,
-  warning: material.yellow.m400,
-  error: material.red.m400,
-
-  code: material.red.m500,
+export const link = {
+  base: material.blue.m500,
+  active: material.grey.m900,
+  focus: material.grey.m800,
+  hover: material.grey.m700,
+  visited: material.purple.m600,
 }
 
-export const alpha = { ...colors.alphaColors }
-export const grey = { ...colors.grey }
-export const gray = { ...colors.grey }
+export const info = material.blue.m400
+export const success = material.green.m400
+export const warning = material.yellow.m400
+export const error = material.red.m400
 
-export const primary = { ...colors.primary }
-export const secondary = { ...colors.secondary }
-export const tertiary = { ...colors.tertiary }
-export const accent = { ...colors.accent }
+export const code = material.red.m500
 
-export const link = colors.link
+export const colors = {
+  alpha,
+  grey,
 
-export const info = colors.info
-export const success = colors.success
-export const warning = colors.warning
-export const error = colors.error
+  primary,
+  secondary,
+  tertiary,
+  accent,
 
-export const code = colors.code
+  link,
+
+  info,
+  success,
+  warning,
+  error,
+
+  code,
+}

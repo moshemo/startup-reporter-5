@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { grey } from 'Theme'
+import { grey } from 'Vars'
 
 export const Table = css`
   table td,

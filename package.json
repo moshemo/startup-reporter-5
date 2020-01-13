@@ -26,7 +26,9 @@
     "react-player": "^1.14.2",
     "react-scrollspy": "^3.4.2",
     "react-spring": "^8.0.27",
+    "reakit": "^1.0.0-beta.14",
     "styled-components": "^4.4.1",
+    "styled-map": "^3.3.0",
     "styled-system": "^5.1.4",
     "typeface-roboto": "0.0.75"
   },

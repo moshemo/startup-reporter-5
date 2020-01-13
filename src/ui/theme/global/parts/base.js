@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { fonts, fontSizes, grey } from 'Theme'
+import { fonts, fontSizes, grey } from 'Vars'
 
 export const Base = css`
   * {

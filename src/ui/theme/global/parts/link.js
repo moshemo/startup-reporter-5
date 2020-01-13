@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { link } from 'Theme'
+import { link } from 'Vars'
 
 export const Link = css`
   a {

@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { code, fonts, fontSizes, grey } from 'Theme'
+import { code, fonts, fontSizes, grey } from 'Vars'
 
 export const Code = css`
   code,

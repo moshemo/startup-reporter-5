@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { grey, fontSizes } from 'Theme'
+import { grey, fontSizes } from 'Vars'
 
 export const Fonts = css`
   small {
