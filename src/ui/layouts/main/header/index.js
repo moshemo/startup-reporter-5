@@ -2,17 +2,34 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { FaCaretDown as CaretDown } from 'react-icons/fa'
+import { MdMenu as MenuIcon } from 'react-icons/md'
 
-import { Dropdown, Menu, Submenu, useMenu, Navbar } from 'Components'
+import { Dropdown, Menu, Navbar } from 'Components'
 import { Button, Icon, Link, Spacer } from 'Elements'
 
-import { grey, primary } from 'Vars'
+import { breakpoints as bp, grey, primary } from 'Vars'
 
 import { menuLinkItems } from './data'
 
+const navbarCSS = css`
+  background-color: ${primary.m800};
+  padding: 0 24px;
+
+  @media (min-width: ${bp.md}) {
+    padding: 0 64px;
+  }
+`
+
+const menuLinksSpaceHeight = '16px'
+
 const menuLinksCSS = css`
   color: ${grey.m100};
-  padding: 16px 24px;
+  display: none;
+  padding: ${menuLinksSpaceHeight} 20px;
+
+  @media (min-width: ${bp.md}) {
+    display: block;
+  }
 
   :focus,
   :hover {
@@ -35,46 +52,50 @@ const subMenuLinksCSS = css`
 `
 
 const caretDownCSS = css`
-  margin-left: 12px;
-  margin-right: -12px;
+  margin-left: 8px;
+  margin-right: -8px;
   position: relative;
   top: 2px;
 `
 
-export const Header = ({ children }) => {
-  const [open, setOpen] = useMenu(false)
+const menuIconCSS = css`
+  color: ${grey.m300};
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: ${menuLinksSpaceHeight};
+  margin-bottom: ${menuLinksSpaceHeight};
+  :hover {
+    color: ${grey.m100};
+  }
+  @media (min-width: ${bp.md}) {
+    display: none;
+  }
+`
 
+export const Header = ({ children }) => {
   return (
     <header>
-      <Navbar
-        css={`
-          background-color: ${primary.m800};
-          padding: 0 64px;
-        `}
-      >
-        <Logo linkTo="/" flexGrow="1">
+      <Navbar css={navbarCSS}>
+        <Logo linkTo="/">
           Startup<span>Reporter</span>
         </Logo>
 
         {menuLinkItems.map(item =>
           item.sublinks ? (
-            <Dropdown key={item.key}>
-              <Link
-                linkTo={item.to}
-                css={menuLinksCSS}
-                onClick={() => setOpen(state => !state)}
-                onBlur={() => setOpen(false)}
-              >
-                {item.title}
-                <CaretDown css={caretDownCSS} />
-              </Link>
-              <Submenu css={subMenuCSS} open={open}>
-                {item.sublinks.map(sublink => (
-                  <Link to={sublink.to} css={subMenuLinksCSS} key={sublink.key}>
-                    {sublink.title}
-                  </Link>
-                ))}
-              </Submenu>
+            <Dropdown
+              key={item.key}
+              title={item.title}
+              as="a"
+              link={item.to}
+              titleCss={menuLinksCSS}
+              icon={<CaretDown css={caretDownCSS} />}
+              menuCss={subMenuCSS}
+            >
+              {item.sublinks.map(sublink => (
+                <Link to={sublink.to} css={subMenuLinksCSS} key={sublink.key}>
+                  {sublink.title}
+                </Link>
+              ))}
             </Dropdown>
           ) : (
             <Link to={item.to} css={menuLinksCSS} key={item.key}>
@@ -82,6 +103,7 @@ export const Header = ({ children }) => {
             </Link>
           )
         )}
+        <MenuIcon css={menuIconCSS} />
       </Navbar>
     </header>
   )
@@ -89,7 +111,13 @@ export const Header = ({ children }) => {
 
 export const Logo = styled(Link)`
   color: ${grey.m300};
+  flex-grow: 1;
   text-transform: uppercase;
+  user-select: none;
+
+  :hover {
+    color: ${grey.m300};
+  }
 
   span {
     color: ${grey.m100};
