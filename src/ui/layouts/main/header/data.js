@@ -45,28 +45,6 @@ export const menuLinkItems = [
     key: 4,
     title: 'Newsletter',
     to: 'newsletter',
-    sublinks: [
-      {
-        key: '4a',
-        title: 'Events',
-        to: 'advertise/events',
-      },
-      {
-        key: '4b',
-        title: 'Classifieds',
-        to: 'advertise/classifieds',
-      },
-      {
-        key: '4c',
-        title: 'Banner Ads',
-        to: 'advertise/banner-ads',
-      },
-      {
-        key: '4d',
-        title: 'Press Releases',
-        to: 'advertise/press-releases',
-      },
-    ],
   },
   {
     key: 5,
