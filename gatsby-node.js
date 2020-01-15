@@ -10,6 +10,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
         // SRC
         Firebase: path.resolve(__dirname, 'src/firebase'),
+        Forms: path.resolve(__dirname, 'src/forms'),
+        Layouts: path.resolve(__dirname, 'src/layouts'),
         Pages: path.resolve(__dirname, 'src/pages'),
 
         // ASSETS
@@ -19,7 +21,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         Components: path.resolve(__dirname, 'src/ui/components'),
         Defaults: path.resolve(__dirname, 'src/ui/defaults'),
         Elements: path.resolve(__dirname, 'src/ui/elements'),
-        Layouts: path.resolve(__dirname, 'src/ui/layouts'),
         Modules: path.resolve(__dirname, 'src/ui/modules'),
         Vars: path.resolve(__dirname, 'src/ui/theme/variables'),
         Theme: path.resolve(__dirname, 'src/ui/theme'),

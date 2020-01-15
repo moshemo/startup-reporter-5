@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'Elements'
 import { grey, primary } from 'Vars'
 
-export const Logo = () => <LogoBase to="/">SR2</LogoBase>
+export const Logo = () => <LogoBase to="/">SR</LogoBase>
 
 export const LogoBase = styled(Link)`
   background-color: ${grey.m800};

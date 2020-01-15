@@ -8,6 +8,8 @@ export const secondary = material.green
 export const tertiary = material.purple
 export const accent = material.orange
 
+export const yellow = material.yellow
+
 export const link = {
   base: material.blue.m500,
   active: material.grey.m900,
@@ -31,6 +33,8 @@ export const colors = {
   secondary,
   tertiary,
   accent,
+
+  yellow,
 
   link,
 

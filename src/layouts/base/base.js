@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 
 // import { GlobalCss } from './theme'
 import { GlobalCss } from './global'
-import theme from '../../theme/theme.js'
+import theme from '../../ui/theme/theme.js'
 
 import SEO from 'Components/seo'
 
