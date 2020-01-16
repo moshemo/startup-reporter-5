@@ -6,12 +6,41 @@ import { MdSearch } from 'react-icons/md'
 // import { Search } from 'Components'
 import { Search } from './search'
 import { NewsletterSignup } from './newsletter-signup'
+import { List, ListHeader, ListItem, ListTitle, ListExcerpt } from './list'
+
 import { breakpoints as bp, colors } from 'Vars'
+import { listArticles } from './data'
 
 export const Sidebar = props => (
   <SidebarBase>
     <Search />
     <NewsletterSignup />
+    <List>
+      <ListHeader
+        css={`
+          margin-top: 60px;
+        `}
+        to="/news/popular"
+      >
+        Most Popular
+      </ListHeader>
+      {listArticles.map(article => (
+        <ListItem to={article.link} key={article.key}>
+          <ListTitle>{article.title}</ListTitle>
+          <ListExcerpt>{article.excerpt}</ListExcerpt>
+        </ListItem>
+      ))}
+    </List>
+
+    <List>
+      <ListHeader to="/news/latest">Latest News</ListHeader>
+      {listArticles.map(article => (
+        <ListItem to={article.link} key={article.key}>
+          <ListTitle>{article.title}</ListTitle>
+          <ListExcerpt>{article.excerpt}</ListExcerpt>
+        </ListItem>
+      ))}
+    </List>
   </SidebarBase>
 )
 
@@ -22,6 +51,8 @@ const SidebarBase = styled.div`
     display: block;
     background-color: ${colors.grey.m100};
     min-height: 100vh;
+    min-width: 400px;
+    width: 400px;
   }
 `
 

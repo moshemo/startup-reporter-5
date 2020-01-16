@@ -7,6 +7,7 @@ import { Button, Input } from 'Elements'
 export const Search = ({
   buttonText,
   before,
+  className,
   after,
   placeholder,
   ...props
@@ -16,7 +17,7 @@ export const Search = ({
   console.log(errors)
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="form">
+    <form onSubmit={handleSubmit(onSubmit)} className={className}>
       {before}
       <Input
         type="search"

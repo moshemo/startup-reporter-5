@@ -6,6 +6,7 @@ import { Button, Input } from 'Elements'
 
 export const NewsletterSignupForm = ({
   buttonText,
+  className,
   placeholderEmail,
   placeholderName,
 }) => {
@@ -17,7 +18,7 @@ export const NewsletterSignupForm = ({
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="form">
+    <form onSubmit={handleSubmit(onSubmit)} className={className}>
       <Input
         type="text"
         name="Name"
