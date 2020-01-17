@@ -11,8 +11,8 @@ import { ListWrapper, NewsBase } from './_styles'
 
 const IndexPage = () => (
   <MainLayout>
-    <SEO title="Home" />
     <NewsBase>
+      <SEO title="Home" />
       <ListWrapper>
         <List cat="latest" name="Latest News" />
         <List cat="featured" name="Featured Stories" />
@@ -32,7 +32,7 @@ const IndexPage = () => (
 
 export default IndexPage
 
-// const HomeBase = styled.main`
+// const NewsBase = styled.main`
 //   margin: 48px auto;
 //   width: 100%;
 // `
