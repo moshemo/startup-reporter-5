@@ -21,6 +21,11 @@ const SocialLink = styled.a`
   padding: 1em;
   transition: all 0.3s;
 
+  :focus {
+    outline: 0;
+    transform: scale(1.2);
+  }
+
   :hover {
     color: ${colors.grey.m100};
     opacity: 0.9;

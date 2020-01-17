@@ -6,7 +6,7 @@ import { FaAngleRight } from 'react-icons/fa'
 
 import { menuLinks } from 'Data'
 import { Container, Link } from 'Elements'
-import { colors } from 'Vars'
+import { breakpoints as bp, colors } from 'Vars'
 
 import { Title } from './styles'
 
@@ -45,15 +45,24 @@ const ListItem = styled(ListItemComp)`
     font-size: 18px;
     font-weight: 700;
     margin-right: 5px;
+    :focus {
+      outline: 0;
+    }
   }
 
   .link {
     color: ${colors.grey.m400};
     font-size: 18px;
     font-weight: 300;
-    line-height: 1.25;
+    line-height: 1.5;
+
+    :focus {
+      outline: 0;
+      color: ${colors.accent.a400};
+    }
   }
 
+  :focus,
   :hover {
     .icon,
     .link {
@@ -62,4 +71,10 @@ const ListItem = styled(ListItemComp)`
   }
 `
 
-const AngleRight = styled(FaAngleRight)``
+const AngleRight = styled(FaAngleRight)`
+  display: none;
+
+  @media (min-width: ${bp.md}) {
+    display: inline;
+  }
+`

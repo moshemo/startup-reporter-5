@@ -68,17 +68,13 @@ const Title = styled(TitleStyles)`
 
 const Icons = styled.div`
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
-  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  grid-gap: 0 32px;
   justify-items: center;
 
-  /* @media (min-width: ${bp.xl}) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-  } */
+  @media (min-width: ${bp.xs}) {
+    grid-gap: 0 32px;
+  }
 `
 
 const SocialIcon = styled(SocialIconComp)`

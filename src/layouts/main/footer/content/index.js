@@ -26,13 +26,19 @@ const Base = styled.section`
 
 const Container = styled(ContainerElement)`
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-  grid-template-areas: 'links . social . contact';
+  grid-gap: 48px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'links'
+    'contact'
+    'social';
+  text-align: center;
 
-  @media (max-width: ${bp.md}) {
+  @media (min-width: ${bp.md}) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'links contact' 'social social';
     grid-gap: 36px;
-    text-align: center;
+    justify-items: center;
+    text-align: left;
   }
 `

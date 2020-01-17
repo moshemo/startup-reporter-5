@@ -46,7 +46,7 @@ const ContentWrapper = styled.div`
 
 const Title = styled.h4`
   color: ${colors.grey.m100};
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.375;
   margin-bottom: 15px;
