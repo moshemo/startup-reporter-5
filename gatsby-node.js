@@ -9,6 +9,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         Static: path.resolve(__dirname, 'static'),
 
         // SRC
+        Data: path.resolve(__dirname, 'src/data'),
         Firebase: path.resolve(__dirname, 'src/firebase'),
         Forms: path.resolve(__dirname, 'src/forms'),
         Layouts: path.resolve(__dirname, 'src/layouts'),

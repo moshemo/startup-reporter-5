@@ -7,7 +7,7 @@ import { MdMenu } from 'react-icons/md'
 import { Link } from 'Elements'
 import { breakpoints as bp, grey } from 'Vars'
 
-import { menuLinkItems } from './data'
+import { menuLinks } from 'Data'
 
 export const Mobile = ({ children }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false)
@@ -19,7 +19,7 @@ export const Mobile = ({ children }) => {
     <>
       <MobileToggle onClick={() => setMobileMenuOpen(state => !state)} />
       <AnimatedMobileMenu style={mobileMenuAnimation}>
-        {menuLinkItems.map(item => (
+        {menuLinks.map(item => (
           <MobileLink to={item.to}>{item.title}</MobileLink>
         ))}
       </AnimatedMobileMenu>

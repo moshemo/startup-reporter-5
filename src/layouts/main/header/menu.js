@@ -9,11 +9,11 @@ import { Link as LinkElement } from 'Elements'
 
 import { breakpoints as bp, grey, primary } from 'Vars'
 
-import { menuLinkItems } from './data'
+import { menuLinks } from 'Data'
 
 export const Menu = () => (
   <MenuBase>
-    {menuLinkItems.map(item =>
+    {menuLinks.map(item =>
       item.sublinks ? (
         <Dropdown
           icon={<CaretDown />}

@@ -1,28 +1,34 @@
 import styled from 'styled-components'
 
-import { button as defaultButton } from 'Theme/defaults'
+import { colors } from 'Vars'
 
 export const Button = styled.button`
   appearance: button;
-
+  background-color: ${colors.grey.m700};
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: ${colors.grey.m100};
   cursor: pointer;
 
-  display: inline-block;
+  font-size: 15px;
 
-  height: 32px;
-  line-height: 1.499;
+  padding: 12px 24px;
+  outline: 0;
 
-  position: relative;
-
+  text-align: center;
   touch-action: manipulation;
 
   white-space: nowrap;
-  user-select: none;
+
+  :active,
+  :hover,
+  :focus {
+    outline: 0;
+  }
 
   ::-moz-focus-inner {
     border-style: none;
     padding: 0;
   }
-
-  ${defaultButton}
 `

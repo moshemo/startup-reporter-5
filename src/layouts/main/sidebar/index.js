@@ -3,51 +3,27 @@ import styled from 'styled-components'
 
 import { MdSearch } from 'react-icons/md'
 
-// import { Search } from 'Components'
+import { BannerAd } from './ads'
+import { List } from './list'
 import { Search } from './search'
-import { NewsletterSignup } from './newsletter-signup'
-import { List, ListHeader, ListItem, ListTitle, ListExcerpt } from './list'
+import { Signup } from './signup'
 
 import { breakpoints as bp, colors } from 'Vars'
-import { listArticles } from './data'
+import { listArticles } from 'Data'
 
-export const Sidebar = props => (
+export const Sidebar = () => (
   <SidebarBase>
     <Search />
-    <NewsletterSignup />
-    <List>
-      <ListHeader
-        css={`
-          margin-top: 60px;
-        `}
-        to="/news/popular"
-      >
-        Most Popular
-      </ListHeader>
-      {listArticles.map(article => (
-        <ListItem to={article.link} key={article.key}>
-          <ListTitle>{article.title}</ListTitle>
-          <ListExcerpt>{article.excerpt}</ListExcerpt>
-        </ListItem>
-      ))}
-    </List>
-
-    <List>
-      <ListHeader to="/news/latest">Latest News</ListHeader>
-      {listArticles.map(article => (
-        <ListItem to={article.link} key={article.key}>
-          <ListTitle>{article.title}</ListTitle>
-          <ListExcerpt>{article.excerpt}</ListExcerpt>
-        </ListItem>
-      ))}
-    </List>
+    <Signup />
+    <List />
+    <BannerAd />
   </SidebarBase>
 )
 
 const SidebarBase = styled.div`
   display: none;
 
-  @media (min-width: ${bp.md}) {
+  @media (min-width: ${bp.lg}) {
     display: block;
     background-color: ${colors.grey.m100};
     min-height: 100vh;
@@ -56,62 +32,62 @@ const SidebarBase = styled.div`
   }
 `
 
-const SearchWrapper = styled.div`
-  background-color: ${colors.grey.m200};
-  padding: 16px 24px;
+// const SearchWrapper = styled.div`
+//   background-color: ${colors.grey.m200};
+//   padding: 16px 24px;
 
-  .search-form {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
+//   .search-form {
+//     display: flex;
+//     align-items: center;
+//     position: relative;
+//   }
 
-  .search-input {
-    background-color: ${colors.grey.m100};
-    border: 1px solid ${colors.grey.m300};
-    border-radius: 0;
-    padding: 8px 16px 8px 40px;
+//   .search-input {
+//     background-color: ${colors.grey.m100};
+//     border: 1px solid ${colors.grey.m300};
+//     border-radius: 0;
+//     padding: 8px 16px 8px 40px;
 
-    :focus,
-    :hover {
-      outline: 0;
-    }
+//     :focus,
+//     :hover {
+//       outline: 0;
+//     }
 
-    :focus {
-      border: 1px solid rgba(0, 0, 0, 0.16);
-    }
-  }
+//     :focus {
+//       border: 1px solid rgba(0, 0, 0, 0.16);
+//     }
+//   }
 
-  .search-button {
-    background-color: ${colors.primary.m700};
-    border: none;
-    border-radius: 0;
-    color: ${colors.grey.m100};
-    cursor: pointer;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    height: 36px;
-    line-height: 36px;
-    min-width: 88px;
-    outline: 0;
-    padding: 0 16px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    vertical-align: middle;
+//   .search-button {
+//     background-color: ${colors.primary.m700};
+//     border: none;
+//     border-radius: 0;
+//     color: ${colors.grey.m100};
+//     cursor: pointer;
+//     font-size: 14px;
+//     letter-spacing: 0.5px;
+//     height: 36px;
+//     line-height: 36px;
+//     min-width: 88px;
+//     outline: 0;
+//     padding: 0 16px;
+//     text-align: center;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     transition: all 0.2s ease-in-out;
+//     vertical-align: middle;
 
-    :focus {
-      background-color: ${colors.primary.m800};
-    }
-    :hover {
-      background-color: ${colors.primary.m600};
-    }
-  }
-`
+//     :focus {
+//       background-color: ${colors.primary.m800};
+//     }
+//     :hover {
+//       background-color: ${colors.primary.m600};
+//     }
+//   }
+// `
 
-const SearchIcon = styled(MdSearch)`
-  color: ${colors.grey.m500};
-  left: 12px;
-  position: absolute;
-`
+// const SearchIcon = styled(MdSearch)`
+//   color: ${colors.grey.m500};
+//   left: 12px;
+//   position: absolute;
+// `

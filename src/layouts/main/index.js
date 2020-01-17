@@ -4,9 +4,10 @@ import styled from 'styled-components'
 
 import BaseLayout from '../base'
 
-import { Main } from './main'
 import { Header } from './header'
+import { Main } from './main'
 import { Sidebar } from './sidebar'
+import { Footer } from './footer'
 
 const MainLayout = ({ children }) => (
   <BaseLayout>
@@ -15,6 +16,7 @@ const MainLayout = ({ children }) => (
       <Main>{children}</Main>
       <Sidebar />
     </Content>
+    <Footer />
   </BaseLayout>
 )
 

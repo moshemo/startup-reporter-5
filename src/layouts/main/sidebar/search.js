@@ -8,23 +8,23 @@ import { breakpoints as bp, colors } from 'Vars'
 
 export const Search = props => (
   <SearchWrapper>
-    <SearchComp buttonText="Search" before={<SearchIcon />} />
+    <SearchBase buttonText="Search" before={<SearchIcon />} />
   </SearchWrapper>
 )
 
 const SearchWrapper = styled.div`
   background-color: ${colors.grey.m200};
   padding: 16px 24px;
+`
 
-  .form {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
+const SearchBase = styled(SearchComp)`
+  display: flex;
+  align-items: center;
+  position: relative;
 
   .input {
     background-color: ${colors.grey.m100};
-    border: 2px solid ${colors.grey.m300};
+    border: 1px solid ${colors.grey.m300};
     border-right: 0;
     border-radius: 0;
     padding: 8px 16px 8px 40px;
@@ -36,8 +36,7 @@ const SearchWrapper = styled.div`
     }
 
     :focus {
-      border: 2px solid ${colors.primary.m700};
-      border-right: 0;
+      background-color: ${colors.grey.m50};
     }
   }
 
@@ -58,7 +57,6 @@ const SearchWrapper = styled.div`
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
-    vertical-align: middle;
 
     :focus {
       background-color: ${colors.primary.m800};

@@ -4,7 +4,7 @@ import * as yup from 'yup'
 
 import { Button, Input } from 'Elements'
 
-export const NewsletterSignupForm = ({
+export const SignupForm = ({
   buttonText,
   className,
   placeholderEmail,

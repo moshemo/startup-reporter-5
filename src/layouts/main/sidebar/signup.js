@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { NewsletterSignupForm } from 'Forms'
+import { SignupForm } from 'Forms'
 import { colors } from 'Vars'
 
-export const NewsletterSignup = () => (
+export const Signup = () => (
   <Base>
     <Title>The Latest News</Title>
     <Subtitle>Signup for Our Newsletter & Stay Up to Date</Subtitle>
@@ -37,7 +37,7 @@ const Subtitle = styled.div`
   padding: 8px 16px;
 `
 
-const Form = styled(NewsletterSignupForm)`
+const Form = styled(SignupForm)`
   .input {
     background-color: ${colors.grey.m100};
     color: ${colors.grey.m800};

@@ -1,7 +1,5 @@
 import { Link as GatsbyLink } from 'gatsby'
-import styled, { css } from 'styled-components'
-
-import { boxCSS } from 'Elements'
+import styled from 'styled-components'
 
 export const Link = styled(GatsbyLink)`
   ::moz-focus-inner {
@@ -13,6 +11,4 @@ export const Link = styled(GatsbyLink)`
     `
       display: inline-block;
     `}
-
-  ${boxCSS}
 `
