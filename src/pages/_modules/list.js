@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { breakpoints as bp, colors } from 'Vars'
+import { colors } from 'Vars'
 
 import {
   List as ListComp,
@@ -17,7 +17,7 @@ export const List = ({ cat, name }) => (
   <ListBase>
     <ListHeader to={`/news/${cat}`}>{name}</ListHeader>
     {listArticles.map(article => (
-      <ListItem to={article.link} key={article.key}>
+      <ListItem to={`/${article.link}`} key={article.key}>
         <ListTitle>{article.title}</ListTitle>
         <ListExcerpt>{article.excerpt}</ListExcerpt>
       </ListItem>

@@ -20,22 +20,22 @@ export const menuLinks = [
     to: 'advertise',
     sublinks: [
       {
-        key: '3a',
+        key: 31,
         title: 'Events',
         to: 'advertise/events',
       },
       {
-        key: '3b',
+        key: 32,
         title: 'Classifieds',
         to: 'advertise/classifieds',
       },
       {
-        key: '3c',
+        key: 33,
         title: 'Banner Ads',
         to: 'advertise/banner-ads',
       },
       {
-        key: '3d',
+        key: 34,
         title: 'Press Releases',
         to: 'advertise/press-releases',
       },

@@ -1,5 +1,15 @@
 const path = require('path')
 
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: 'babel-plugin-import',
+    options: {
+      libraryName: 'antd',
+      style: true,
+    },
+  })
+}
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {

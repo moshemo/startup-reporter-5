@@ -6,6 +6,7 @@ import { colors } from 'Vars'
 export const List = styled.div.attrs({
   className: 'list',
 })`
+  padding-top: 48px;
   padding-bottom: 18px;
 
   border-bottom: 1px solid ${colors.grey.m300};
@@ -17,8 +18,6 @@ export const ListHeader = styled(Link).attrs({
   color: ${colors.grey.m600};
   display: block;
   font-size: 14px;
-  margin-bottom: 18px;
-  margin-top: 48px;
   max-width: 320px;
   padding-left: 32px;
   padding-right: 32px;

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import { Link } from 'Elements'
 
@@ -34,7 +34,9 @@ export const Dropdown = ({
       // onClick={handleClick}
       // onBlur={handleBlur}
       onMouseOver={handleMouseOver}
+      onFocus={handleMouseOver}
       onMouseOut={handleMouseOut}
+      onBlur={handleMouseOut}
     >
       <Trigger to={titleLink} tabIndex="0" {...props}>
         <span>{title}</span>

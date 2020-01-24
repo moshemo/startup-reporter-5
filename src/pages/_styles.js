@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const NewsBase = styled.main`
   margin: 48px auto;
@@ -12,4 +12,9 @@ export const ListWrapper = styled.div`
   justify-content: space-evenly;
   padding: 0 24px;
   max-width: 100;
+`
+
+// ------- CSS --------
+export const section = css`
+  margin-bottom: 100px;
 `

@@ -27,6 +27,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        javascriptEnabled: true,
+        modifyVars: {
+          // 'primary-color': '#1890ff',
+          // 'secondary-color': '#b7eb8f',
+          // 'tertiary-color': '#b37feb',
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `startup-reporter`,
@@ -36,6 +47,15 @@ module.exports = {
         theme_color: `#454545`,
         display: `minimal-ui`,
         icon: `src/assets/img/manifest-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+
+    // SOURCES
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/img`,
       },
     },
 

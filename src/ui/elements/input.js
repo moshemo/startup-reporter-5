@@ -15,3 +15,15 @@ export const Input = styled.input`
     color: ${colors.grey.m400};
   }
 `
+
+export const Textarea = styled.textarea`
+  background-color: #fff;
+  border: 1px solid ${colors.grey.m200};
+  box-sizing: border-box;
+  height: 96px;
+  padding: 8px 12px;
+
+  ::placeholder {
+    color: ${colors.grey.m400};
+  }
+`

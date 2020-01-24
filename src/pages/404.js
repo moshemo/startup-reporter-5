@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ErrorLayout from 'Layouts/error'
+import ErrorLayout from 'Layouts/main/error'
 import SEO from 'Components/seo'
 
 const Error404Page = () => (

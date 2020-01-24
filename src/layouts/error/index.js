@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import BaseLayout from '../error'
+import BaseLayout from '../base'
 
-const ErrorLayout = ({ children }) => <BaseLayout>{children}</BaseLayout>
+const ErrorLayoutOLD = ({ children }) => <BaseLayout>{children}</BaseLayout>
 
-ErrorLayout.propTypes = {
+ErrorLayoutOLD.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default ErrorLayout
+export default ErrorLayoutOLD

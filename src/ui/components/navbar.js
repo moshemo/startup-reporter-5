@@ -4,8 +4,6 @@ import styled from 'styled-components'
 
 import { Box, boxCSS } from 'Elements'
 
-import { colors } from '../theme/variables/colors'
-
 export const Navbar = styled.nav.attrs(props => ({
   role: 'navigation',
   ariaLabel: 'main navigation',
