@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 
-import { Button, Input, Textarea } from 'Elements'
+import { Button, Input, Textarea } from 'Shared/components'
 
 export const ContactForm = ({
   buttonText,

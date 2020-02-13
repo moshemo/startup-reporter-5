@@ -24,17 +24,15 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         Forms: path.resolve(__dirname, 'src/forms'),
         Layouts: path.resolve(__dirname, 'src/layouts'),
         Pages: path.resolve(__dirname, 'src/pages'),
+        UI: path.resolve(__dirname, 'src/ui'),
 
         // ASSETS
         Images: path.resolve(__dirname, 'src/assets/img'),
 
         // UI
-        Components: path.resolve(__dirname, 'src/ui/components'),
-        Defaults: path.resolve(__dirname, 'src/ui/defaults'),
-        Elements: path.resolve(__dirname, 'src/ui/elements'),
-        Modules: path.resolve(__dirname, 'src/ui/modules'),
-        Vars: path.resolve(__dirname, 'src/ui/theme/variables'),
-        Theme: path.resolve(__dirname, 'src/ui/theme'),
+        Shared: path.resolve(__dirname, 'src/ui/shared'),
+        Helpers: path.resolve(__dirname, 'src/ui/shared/helpers'),
+        Themes: path.resolve(__dirname, 'src/ui/themes'),
       },
     },
   })

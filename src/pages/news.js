@@ -1,7 +1,7 @@
 import React from 'react'
+import MainLayout from 'Layouts/main'
 
 import { List, ListWrapper } from 'Themes/main'
-import MainLayout from 'Layouts/main'
 // import SEO from 'Components/seo'
 
 const IndexPage = () => (
